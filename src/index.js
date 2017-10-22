@@ -1,20 +1,15 @@
 import _ from 'lodash';
-import './style.css';
-// import Icon from './icon.png';
-import Data from './data.xml';
+import printMe from './print';
 
 function component() {
 	var element = document.createElement('div');
+	var btn = document.createElement('button');
 	// this statement needs to include Loadash library to work
 	element.innerHTML = _.join(['Hello', 'Webpack'], '');
-	element.classList.add('hello');
+	btn.innerHTML = 'See the console';
+	btn.onclick = printMe;
 
-	// var myImg = document.createElement('img');
-	// myImg.src = Icon;
-
-	// element.appendChild(myImg);
-
-	console.log(Data);
+	element.appendChild(btn);
 
 	return element;
 }
