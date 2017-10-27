@@ -16,5 +16,9 @@ module.exports = {
   		title: 'Output Management'
   	}),
   	new CleanWebpackPlugin(['dist'])
-  ]
+  ],
+  devtool: 'inline-source-map',
+  devServer: {
+    contentBase: './dist'
+  }
 };
